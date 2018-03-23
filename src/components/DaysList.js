@@ -6,7 +6,13 @@ class App extends Component {
   render() {
     return (
 
-      <Link to='/editor'> + </Link>
+      <div>
+        <Link to='/editor'> + </Link> <br/>
+
+        <p>{this.props.moodState}</p>
+        </div>
+
+
     );
   }
 }

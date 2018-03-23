@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import DaysList from './DaysList';
-
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      optionInput: "",
-    }
-  }
+
 
   getDay = () => {
     let today = new Date();
@@ -25,12 +18,6 @@ class App extends Component {
     return today = mm + '/' + dd + '/' + yyyy;
   }
 
-  handleChange = event => {
-    this.setState({
-      optionInput: event.currentTarget.value
-    })
-  }
-
 
   render() {
 
@@ -39,25 +26,26 @@ class App extends Component {
     return (
       <div>
 
-        <ul>
-          <li>
-            <label htmlFor="o1">
-              <input type="radio" value="smile" id="o1" name="moods" onChange={this.handleChange}/> :)
-            </label>
-          </li>
-          <li>
-            <label htmlFor="o2">
-              <input type="radio" value="sad" id="o2" name="moods" onChange={this.handleChange} /> :(
-            </label>
-          </li>
-        </ul>
+        <form>
+          <ul>
+            <li>
+              <label htmlFor="smile">
+                <input type="radio" value="smile" id="smile" name="moods" onChange={this.props.onChange}/> :)
+              </label>
+            </li>
+            <li>
+              <label htmlFor="sad">
+                <input type="radio" value="sad" id="sad" name="moods" onChange={this.props.onChange} /> :(
+              </label>
+            </li>
+          </ul>
+        </form>
 
         { date }
 
         <br/>
         <Link to='/'> Cancelar </Link>
 
-        
       </div>
       );
     }

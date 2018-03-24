@@ -44,6 +44,13 @@ class App extends Component {
         { date }
 
         <br/>
+
+        <Link to='/'>
+          <button type="button" name="button" onClick={this.props.onClick}> Guardar </button>
+        </Link>
+
+        <br/>
+
         <Link to='/'> Cancelar </Link>
 
       </div>

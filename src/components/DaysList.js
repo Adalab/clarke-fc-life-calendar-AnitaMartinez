@@ -2,19 +2,30 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 
-class App extends Component {
+class DaysList extends Component {
+
   render() {
+
+
     return (
 
       <div>
         <Link to='/editor'> + </Link> <br/>
 
-        <p>{this.props.moodState}</p>
-        </div>
+        <ul>
+          {this.props.moods.map((mood, index) => {
+            return <li key={index}>
+                    <img className="icon" src= { "icons/" + mood + ".svg" } alt={mood} />
+                  </li>
+          })}
+
+        </ul>
+
+      </div>
 
 
     );
   }
 }
 
-export default App;
+export default DaysList;

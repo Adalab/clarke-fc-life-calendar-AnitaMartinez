@@ -3,13 +3,13 @@ import { Route, Switch } from 'react-router-dom';
 import DaysList from './components/DaysList';
 import Editor from './components/Editor';
 
-let AllMoods;
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       optionInput: "",
+      moods: JSON.parse(localStorage.getItem('moods')) || [],
     }
   }
 
@@ -20,9 +20,12 @@ class App extends Component {
   }
 
   saveDataToLocalStorage = data => {
-    let a = JSON.parse(localStorage.getItem('moods')) || [];
-    a.push(data);
-    localStorage.setItem('moods', JSON.stringify(a));
+    let moods = JSON.parse(localStorage.getItem('moods')) || [];
+    moods.push(data);
+    localStorage.setItem('moods', JSON.stringify(moods));
+    this.setState({
+      moods: moods
+    })
   }
 
   handleSaveValue = () => {
@@ -32,21 +35,21 @@ class App extends Component {
 
   render() {
 
-
     return (
 
       <main>
         <Switch>
           <Route path='/Editor' render= {() =>
             <Editor
-              onChange= { this.handleChangeInput }
-              onClick= { this.handleSaveValue }
+              onChange = { this.handleChangeInput }
+              onClick = { this.handleSaveValue }
             />
           }
           />
           <Route exact path='/' render={() =>
             <DaysList
-              moodState={ this.state.optionInput }
+              moodState = { this.state.optionInput }
+              moods = { this.state.moods}
             />
           }
           />

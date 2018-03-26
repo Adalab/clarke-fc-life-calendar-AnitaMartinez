@@ -1,0 +1,62 @@
+
+.tittle-editor {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.container-editor {
+  padding: 50px 40px 0 40px;
+}
+
+.date {
+  margin: 15px 0 40px 0;
+  background-color: rgba(189, 189, 184, 0.2);
+  padding: 10px;
+}
+
+.icon-calendar {
+  position: absolute;
+  top: 6px;
+  right: 20px;
+}
+
+.container-date {
+  position: relative;
+  box-shadow: 3px 3px #868683;
+}
+
+.input-radio {
+  margin-top: 25px;
+}
+
+.label-radio {
+  margin-right: 25px;
+}
+
+.button {
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-save {
+  background-color: $color-primary;
+  color: $color-light;
+  border: 1px solid $color-primary;
+  padding: 3px 0;
+  margin-top: 40px;
+}
+
+.button-cancel {
+  background-color: $color-light;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  text-align: center;
+  display: inline-block;
+  padding: 6px 0;
+  margin-top: 20px;
+}

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 class Editor extends Component {
 
-
   getDay = () => {
     let today = new Date();
     let dd = today.getDate();
@@ -18,43 +17,39 @@ class Editor extends Component {
     return today = mm + '/' + dd + '/' + yyyy;
   }
 
-
   render() {
 
     const date = this.getDay();
 
     return (
-      <div>
+      <div className="container-editor">
+
+        <h2 className="tittle-editor">Hoy es...</h2>
+
+        <div className="container-date">
+        <p className="date">{ date }</p>
+        <img className="icon-calendar" src="./icons/calendar.svg" alt="Icono calendario"/>
+        </div>
 
         <form>
-          <ul>
-            <li>
-              <label htmlFor="smile">
-                <input type="radio" value="smile" id="smile" name="moods" onChange={this.props.onChange}/> :)
-              </label>
-            </li>
-            <li>
-              <label htmlFor="sad">
-                <input type="radio" value="sad" id="sad" name="moods" onChange={this.props.onChange} /> :(
-              </label>
-            </li>
-          </ul>
-        </form>
+          <h1 className="tittle-editor">¿Y me siento?</h1>
 
-        { date }
+          <input className="input-radio" type="radio" value="smile" id="smile" name="moods" onChange={this.props.onChange}/>
+          <label className="label-radio" htmlFor="smile"> :) </label>
 
-        <br/>
+          <input type="radio" value="sad" id="sad" name="moods" onChange={this.props.onChange} />
+          <label htmlFor="sad"> :( </label>
 
-        <Link to='/'>
-          <button type="button" name="button" onClick={this.props.onClick}> Guardar </button>
-        </Link>
+          </form>
 
-        <br/>
+          <Link to='/'>
+            <button className="button button-save" type="button" name="button" onClick={this.props.onClick}> Guardar </button>
+          </Link>
 
-        <Link to='/'> Cancelar </Link>
+          <Link className="button button-cancel" to='/'> Cancelar </Link>
 
       </div>
-      );
+    );
     }
   }
 

@@ -17,34 +17,6 @@ ul {
 a {
   text-decoration: none; }
 
-.tittle-editor {
-  font-size: 22px;
-  text-transform: uppercase;
-  margin: 0; }
-
-.container-editor {
-  padding: 50px 40px 0 40px; }
-
-.date {
-  margin: 15px 0 40px 0;
-  background-color: rgba(189, 189, 184, 0.2);
-  padding: 10px; }
-
-.icon-calendar {
-  position: absolute;
-  top: 6px;
-  right: 20px; }
-
-.container-date {
-  position: relative;
-  box-shadow: 3px 3px #868683; }
-
-.input-radio {
-  margin-top: 25px; }
-
-.label-radio {
-  margin-right: 25px; }
-
 .button {
   font-size: inherit;
   font-family: inherit;
@@ -53,12 +25,14 @@ a {
   width: 100%;
   cursor: pointer; }
 
+.button:hover {
+  color: #ffa64d; }
+
 .button-save {
   background-color: #009ecc;
   color: #ffffff;
   border: 1px solid #009ecc;
-  padding: 3px 0;
-  margin-top: 40px; }
+  padding: 3px 0; }
 
 .button-cancel {
   background-color: #ffffff;
@@ -68,3 +42,63 @@ a {
   display: inline-block;
   padding: 6px 0;
   margin-top: 20px; }
+
+.link-change-view {
+  cursor: pointer;
+  background-color: #009ecc;
+  color: #ffffff;
+  border: 1px solid #009ecc;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px; }
+
+.link-change-view:hover {
+  color: #ffa64d; }
+
+.icon {
+  width: 50px; }
+
+.container-icons {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+.list-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.container-editor {
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-between; }
+
+.tittle-editor {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin: 0; }
+
+.container-date {
+  position: relative;
+  box-shadow: 3px 3px #868683;
+  margin: 15px 0 50px 0; }
+
+.date {
+  background-color: rgba(189, 189, 184, 0.2);
+  padding: 10px; }
+
+.icon-calendar {
+  position: absolute;
+  top: 6px;
+  right: 20px; }
+
+.input-radio {
+  margin-top: 25px; }
+
+.label-radio {
+  margin-right: 25px; }
+
+.container-buttons {
+  padding-top: 40px; }

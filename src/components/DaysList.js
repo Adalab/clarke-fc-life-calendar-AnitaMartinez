@@ -10,17 +10,19 @@ class DaysList extends Component {
     return (
 
       <div>
-        <Link to='/editor'> + </Link> <br/>
+        <Link className="link-change-view" to='/editor'> + </Link> <br/>
 
-        <ul>
-          {this.props.moods.map((mood, index) => {
-            return <li key={index}>
-                    <img className="icon" src= { "icons/" + mood + ".svg" } alt={mood} />
-                  </li>
-          })}
+        <div className="container-icons">
 
-        </ul>
+          <ul className="list-icons">
+            {this.props.moods.map((mood, index) => {
+              return <li key={index}>
+                      <img className="icon" src= { "icons/" + mood + ".svg" } alt={mood} />
+                    </li>
+            })}
+          </ul>
 
+        </div>
       </div>
 
 

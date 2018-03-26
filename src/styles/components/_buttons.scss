@@ -1,0 +1,45 @@
+
+.button {
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: $color-secondary;
+}
+
+.button-save {
+  background-color: $color-primary;
+  color: $color-light;
+  border: 1px solid $color-primary;
+  padding: 3px 0;
+}
+
+.button-cancel {
+  background-color: $color-light;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  text-align: center;
+  display: inline-block;
+  padding: 6px 0;
+  margin-top: 20px;
+}
+
+.link-change-view {
+  cursor: pointer;
+  background-color: $color-primary;
+  color: $color-light;
+  border: 1px solid $color-primary;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.link-change-view:hover {
+  color: $color-secondary;
+}

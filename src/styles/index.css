@@ -17,13 +17,15 @@ ul {
 a {
   text-decoration: none; }
 
+input, a, button, label {
+  cursor: pointer; }
+
 .button {
   font-size: inherit;
   font-family: inherit;
   border-radius: 5px;
   letter-spacing: 0.5px;
-  width: 100%;
-  cursor: pointer; }
+  width: 100%; }
 
 .button:hover {
   color: #ffa64d; }
@@ -44,7 +46,6 @@ a {
   margin-top: 20px; }
 
 .link-change-view {
-  cursor: pointer;
   background-color: #009ecc;
   color: #ffffff;
   border: 1px solid #009ecc;
@@ -62,6 +63,14 @@ a {
 .container-icons {
   padding-left: 40px;
   padding-right: 40px; }
+  @media (min-width: 800px) {
+    .container-icons {
+      padding-left: 200px;
+      padding-right: 200px; } }
+  @media (min-width: 1100px) {
+    .container-icons {
+      padding-left: 300px;
+      padding-right: 300px; } }
 
 .list-icons {
   display: flex;
@@ -79,6 +88,16 @@ a {
   font-size: 22px;
   text-transform: uppercase;
   margin: 0; }
+
+@media (min-width: 800px) {
+  .container-inputs {
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%; } }
+
+@media (min-width: 1100px) {
+  .container-inputs {
+    width: 60%; } }
 
 .container-date {
   position: relative;
@@ -102,3 +121,11 @@ a {
 
 .container-buttons {
   padding-top: 40px; }
+  @media (min-width: 800px) {
+    .container-buttons {
+      margin-right: auto;
+      margin-left: auto;
+      width: 70%; } }
+  @media (min-width: 1100px) {
+    .container-buttons {
+      width: 60%; } }

@@ -13,6 +13,17 @@
   margin: 0;
 }
 
+.container-inputs {
+  @media (min-width: $media-tablet) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+  }
+  @media (min-width: $media-desktop) {
+    width: 60%;
+  }
+}
+
 .container-date {
   position: relative;
   box-shadow: 3px 3px #868683;
@@ -40,4 +51,12 @@
 
 .container-buttons {
   padding-top: 40px;
+  @media (min-width: $media-tablet) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+  }
+  @media (min-width: $media-desktop) {
+    width: 60%;
+  }
 }

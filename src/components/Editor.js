@@ -24,7 +24,7 @@ class Editor extends Component {
     return (
       <div className="container-editor">
 
-        <div>
+        <div className="container-inputs">
 
           <h2 className="tittle-editor">Hoy es...</h2>
 

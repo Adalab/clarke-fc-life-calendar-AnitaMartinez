@@ -43,6 +43,8 @@ class App extends Component {
             <Editor
               onChange = { this.handleChangeInput }
               onClick = { this.handleSaveValue }
+              moood = { this.state.optionInput }
+              handleMessage = { this.handleMessage }
             />
           }
           />

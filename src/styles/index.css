@@ -129,3 +129,9 @@ input, a, button, label {
   @media (min-width: 1100px) {
     .container-buttons {
       width: 60%; } }
+
+.visible {
+  display: block; }
+
+.hidden {
+  display: none; }

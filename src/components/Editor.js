@@ -42,7 +42,12 @@ class Editor extends Component {
             <input type="radio" value="sad" id="sad" name="moods" onChange={this.props.onChange} />
             <label htmlFor="sad"> :( </label>
 
-            </form>
+            <div className={`message-form ${this.props.mood === 'smile' ? 'visible' : '' }`}>
+              <label htmlFor="message">¿Por qué es un buen día?</label>
+              <input id="message" type="text" name="message" onChange={this.props.handleMessage} placeholder="Es un buen día por..." />
+            </div>
+
+          </form>
 
           </div>
 
